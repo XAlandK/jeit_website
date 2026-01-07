@@ -241,7 +241,7 @@ body {
     padding: 12px;
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(30, 64, 175, 0.3);
-    animation: float 3s ease-in-out infinite;
+    animation: float 7s ease-in-out infinite;
 }
 
 @keyframes float {
