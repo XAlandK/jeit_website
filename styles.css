@@ -442,6 +442,20 @@ body {
     color: var(--primary-color);
 }
 
+.download-qr-inline {
+    display: inline-flex;
+    align-items: center;
+}
+
+.download-qr-inline .qr-image {
+    width: 92px;
+    height: auto;
+    background: var(--white);
+    padding: 8px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
 /* Footer */
 .footer {
     background: var(--primary-color);
