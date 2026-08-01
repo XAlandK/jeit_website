@@ -5,6 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JeIT - جێیەک بۆ تەکنەلۆجیای زانیاری</title>
+    <meta name="description"
+        content="جێئایتی مەکۆیەکی کوردیی ناوەندییە بۆ زاراوە و بابەتە تەکنەلۆجیاییەکان؛ تایبەت بە فێرخوازان و فێرکارانی بەشە کۆمپیوتەرییەکان.">
+    <meta name="theme-color" content="#1e40af">
+    <link rel="canonical" href="https://jeit-website.vercel.app/">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="JeIT">
+    <meta property="og:locale" content="ku_IQ">
+    <meta property="og:title" content="JeIT - جێیەک بۆ تەکنەلۆجیای زانیاری">
+    <meta property="og:description"
+        content="جێئایتی مەکۆیەکی کوردیی ناوەندییە بۆ زاراوە و بابەتە تەکنەلۆجیاییەکان؛ تایبەت بە فێرخوازان و فێرکارانی بەشە کۆمپیوتەرییەکان.">
+    <meta property="og:url" content="https://jeit-website.vercel.app/">
+    <meta property="og:image" content="https://jeit-website.vercel.app/icon-192.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JeIT - جێیەک بۆ تەکنەلۆجیای زانیاری">
+    <meta name="twitter:description"
+        content="جێئایتی مەکۆیەکی کوردیی ناوەندییە بۆ زاراوە و بابەتە تەکنەلۆجیاییەکان.">
+    <meta name="twitter:image" content="https://jeit-website.vercel.app/icon-192.png">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,22 +36,23 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#features">بازدان بۆ ناوەڕۆک</a>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <img class="logo-icon" src="icon.jpg" alt="">
-                    </div>
+                <a class="logo" href="#" aria-label="JeIT — سەرەتا">
+                    <img class="logo-icon" src="icon-192.png" alt="" width="48" height="48" decoding="async">
                     <span class="logo-text">JeIT</span>
-                </div>
-                <nav class="nav">
+                </a>
+                <nav class="nav" aria-label="ناوبردنی سەرەکی">
                     <a href="#features">تایبەتمەندییەکان</a>
                     <a href="#about">دەربارە</a>
                     <a href="#download">دابارکردن</a>
                 </nav>
-                <button class="menu-toggle" id="menuToggle">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="لیستەی ناوبردن"
+                    aria-expanded="false" aria-controls="mobileMenu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -56,14 +81,14 @@
                         مەکۆیەکی پڕ لە زانیاریی کوردیی ناوەندی سەبارەت بە بابەتە تەکنەلۆجیاییەکان و بڕینی بەربەستی فێرنەبوون و تێنەگەیشتن لە زاراوە تەکنیکییەکان؛ تایبەت بە فێرخوازان و فێرکارانی بەشە کۆمپیوتەرییەکان.
                     </p>
                     <div class="download-buttons">
-                        <a href="https://apps.apple.com/uz/app/jeit-a-place-for-infotech/id6746078778" class="btn btn-secondary" target="_blank">
-                            <svg width="55" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://apps.apple.com/uz/app/jeit-a-place-for-infotech/id6746078778" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <svg width="55" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                             </svg>
                             <span>Download on the<br><strong>App Store</strong></span>
                         </a>
-                        <a href="jeit.apk" class="btn btn-secondary">
-                            <svg width="45" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="jeit.apk" class="btn btn-secondary" download>
+                            <svg width="45" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                 <path d="M17.6,9.48l1.84-3.18c0.16-0.31,0.04-0.69-0.26-0.85c-0.29-0.15-0.65-0.06-0.83,0.22l-1.88,3.24 c-2.86-1.21-6.08-1.21-8.94,0L5.65,5.67c-0.19-0.29-0.58-0.38-0.87-0.2C4.5,5.65,4.41,6.01,4.56,6.3L6.4,9.48 C3.3,11.25,1.28,14.44,1,18h22C22.72,14.44,20.7,11.25,17.6,9.48z M7,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25S8.25,13.31,8.25,14C8.25,14.69,7.69,15.25,7,15.25z M17,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25s1.25,0.56,1.25,1.25C18.25,14.69,17.69,15.25,17,15.25z"/>
                             </svg>
                             <span>Download (APK)</span>
@@ -77,9 +102,10 @@
                 <div class="hero-image">
                     <div class="phone-mockup">
                         <div class="phone-frame">
-                            <video class="phone-screen" autoplay muted loop playsinline webkit-playsinline>
+                            <video class="phone-screen" autoplay muted loop playsinline webkit-playsinline
+                                disablepictureinpicture aria-label="نمایشی بەرنامەی JeIT">
                                 <source src="video.mp4" type="video/mp4">
-                                Your browser does not support the video to be played.
+                                وێبگەڕەکەت پاڵپشتی نمایشی ڤیدیۆ ناکات.
                             </video>
                         </div>
                     </div>
@@ -188,14 +214,14 @@
                     بەشدار بە لە خۆفێرکردن؛ بە زمانی شیرینی دایک خۆت فێری تەکنەلۆجیا بکە.
                 </p>
                 <div class="download-buttons">
-                    <a href="https://apps.apple.com/uz/app/jeit-a-place-for-infotech/id6746078778" class="btn btn-primary btn-large" target="_blank">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <a href="https://apps.apple.com/uz/app/jeit-a-place-for-infotech/id6746078778" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                         </svg>
                         <span>Download on the<br><strong>App Store</strong></span>
                     </a>
-                    <a href="#" class="btn btn-primary btn-large" target="_blank">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <a href="jeit.apk" class="btn btn-primary btn-large" download>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                             <path d="M17.6,9.48l1.84-3.18c0.16-0.31,0.04-0.69-0.26-0.85c-0.29-0.15-0.65-0.06-0.83,0.22l-1.88,3.24 c-2.86-1.21-6.08-1.21-8.94,0L5.65,5.67c-0.19-0.29-0.58-0.38-0.87-0.2C4.5,5.65,4.41,6.01,4.56,6.3L6.4,9.48 C3.3,11.25,1.28,14.44,1,18h22C22.72,14.44,20.7,11.25,17.6,9.48z M7,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25S8.25,13.31,8.25,14C8.25,14.69,7.69,15.25,7,15.25z M17,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25s1.25,0.56,1.25,1.25C18.25,14.69,17.69,15.25,17,15.25z"/>
                         </svg>
                         <span>Download (APK)</span>
@@ -210,16 +236,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="logo-icon">
-                        <img class="logo-icon" src="icon.jpg" alt="">
-                    </div>
+                    <img class="logo-icon" src="icon-192.png" alt="لۆگۆی JeIT" width="48" height="48" loading="lazy"
+                        decoding="async">
                     <p>جێیەک بۆ تەکنەلۆجیای زانیاری</p>
                 </div>
-                <div class="footer-links">
+                <nav class="footer-links" aria-label="ناوبردنی پێی لاپەڕە">
                     <a href="#features">تایبەتمەندییەکان</a>
                     <a href="#about">دەربارە</a>
                     <a href="#download">دابارکردن</a>
-                </div>
+                </nav>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 JeIT هەموو مافێک پارێزراوە</p>

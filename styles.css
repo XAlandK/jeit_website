@@ -31,6 +31,30 @@ body {
     padding: 0 20px;
 }
 
+/* Keyboard accessibility */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    right: 20px;
+    z-index: 200;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 3px;
+}
+
 /* Header */
 .header {
     background: var(--white);
@@ -51,20 +75,15 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
 }
 
 .logo-icon {
     width: 48px;
     height: 48px;
-    background: var(--primary-color);
     border-radius: 8px;
-    border: solid 0.1px var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 24px;
-    font-weight: bold;
+    object-fit: cover;
+    display: block;
 }
 
 .logo-text {
@@ -106,6 +125,18 @@ body {
     background: var(--text-dark);
     border-radius: 2px;
     transition: all 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .mobile-menu {
@@ -472,11 +503,6 @@ body {
 
 .footer-logo .logo-icon {
     background: var(--white);
-    color: var(--primary-color);
-}
-
-.footer-logo .logo-text {
-    color: var(--white);
 }
 
 .footer-logo p {
@@ -591,5 +617,21 @@ body {
 
     .logo-text {
         font-size: 20px;
+    }
+}
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .phone-frame {
+        animation: none;
     }
 }
