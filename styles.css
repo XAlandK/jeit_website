@@ -204,6 +204,26 @@ body {
     flex-wrap: wrap;
 }
 
+/*
+ * Hero call-to-action row. Without align-items the QR code stretched both
+ * buttons to its own height, so pin all three to one compact height instead.
+ */
+.hero .download-buttons {
+    --cta-height: 56px;
+    align-items: center;
+}
+
+.hero .download-buttons .btn {
+    height: var(--cta-height);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.hero .download-qr-inline .qr-image {
+    height: var(--cta-height);
+    width: auto;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -603,6 +623,12 @@ body {
     .btn {
         width: 100%;
         justify-content: center;
+    }
+
+    /* Stacked, so nothing needs to line up: let the QR breathe again. */
+    .hero .download-qr-inline .qr-image {
+        height: auto;
+        width: 110px;
     }
 
     .footer-content {
