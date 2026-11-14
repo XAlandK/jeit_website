@@ -55,6 +55,61 @@ body {
     outline-offset: 3px;
 }
 
+/* Deprecation banner */
+.deprecation-banner {
+    --banner-red: #b91c1c;
+    background: var(--banner-red);
+    color: var(--white);
+}
+
+.deprecation-content {
+    display: flex;
+    align-items: center;
+    gap: 12px 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.deprecation-icon {
+    flex-shrink: 0;
+}
+
+.deprecation-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.deprecation-text-en {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.9;
+    text-align: right;
+}
+
+.deprecation-link {
+    flex-shrink: 0;
+    background: var(--white);
+    color: var(--banner-red);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.deprecation-link:hover {
+    background: #fee2e2;
+}
+
+.deprecation-banner :focus-visible {
+    outline-color: var(--white);
+}
+
 /* Header */
 .header {
     background: var(--white);
@@ -277,6 +332,21 @@ body {
     font-size: 15px;
 }
 
+/* Retired downloads: visible but inert. Placed after every .btn variant so it wins. */
+.btn.is-disabled,
+.btn.is-disabled:hover {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    filter: grayscale(1);
+}
+
+.btn-secondary.is-disabled:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
 /* Phone Mockup */
 .phone-mockup {
     display: flex;
@@ -482,6 +552,22 @@ body {
     background: var(--bg-light);
 }
 
+.download .btn-primary.is-disabled:hover {
+    background: var(--white);
+}
+
+.download-retired {
+    margin-top: 24px;
+    font-size: 15px;
+    opacity: 0.95;
+}
+
+.download-retired a {
+    color: var(--white);
+    font-weight: 700;
+    text-underline-offset: 4px;
+}
+
 .download .btn-secondary {
     background: transparent;
     color: var(--white);
@@ -505,6 +591,12 @@ body {
     padding: 8px;
     border-radius: 14px;
     box-shadow: var(--shadow);
+}
+
+/* Blurred so the retired QR code can no longer be scanned. */
+.download-qr-inline.is-disabled .qr-image {
+    opacity: 0.45;
+    filter: blur(4px);
 }
 
 /* Footer */
@@ -564,6 +656,20 @@ body {
 
     .menu-toggle {
         display: flex;
+    }
+
+    .deprecation-content {
+        flex-wrap: wrap;
+    }
+
+    .deprecation-text {
+        flex-basis: calc(100% - 40px);
+        font-size: 14px;
+    }
+
+    .deprecation-link {
+        width: 100%;
+        text-align: center;
     }
 
     .hero {

@@ -38,6 +38,24 @@
 <body>
     <a class="skip-link" href="#features">بازدان بۆ ناوەڕۆک</a>
 
+    <!-- Deprecation notice: this site and app are retired in favour of CEIT -->
+    <div class="deprecation-banner" role="region" aria-label="ئاگاداری">
+        <div class="container deprecation-content">
+            <svg class="deprecation-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            <p class="deprecation-text">
+                <span>ئەم ماڵپەڕ و بەرنامەیە چیتر نوێ ناکرێنەوە. وەشانێکی نوێمان هەیە:</span>
+                <span class="deprecation-text-en" lang="en" dir="ltr">This website and app are no longer maintained.
+                    We have a new version:</span>
+            </p>
+            <a class="deprecation-link" href="https://ceit.vercel.app" lang="en" dir="ltr">ceit.vercel.app</a>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -80,22 +98,23 @@
                     <p class="hero-description">
                         مەکۆیەکی پڕ لە زانیاریی کوردیی ناوەندی سەبارەت بە بابەتە تەکنەلۆجیاییەکان و بڕینی بەربەستی فێرنەبوون و تێنەگەیشتن لە زاراوە تەکنیکییەکان؛ تایبەت بە فێرخوازان و فێرکارانی بەشە کۆمپیوتەرییەکان.
                     </p>
+                    <!-- Downloads are retired (see deprecation banner): no href, so these are not links. -->
                     <div class="download-buttons">
-                        <a href="https://apps.apple.com/uz/app/jeit-a-place-for-infotech/id6746078778" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <a class="btn btn-secondary is-disabled" role="link" aria-disabled="true">
                             <svg width="55" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                             </svg>
                             <span>Download on the<br><strong>App Store</strong></span>
                         </a>
-                        <a href="jeit.apk" class="btn btn-secondary" download>
+                        <a class="btn btn-secondary is-disabled" role="link" aria-disabled="true">
                             <svg width="45" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                                 <path d="M17.6,9.48l1.84-3.18c0.16-0.31,0.04-0.69-0.26-0.85c-0.29-0.15-0.65-0.06-0.83,0.22l-1.88,3.24 c-2.86-1.21-6.08-1.21-8.94,0L5.65,5.67c-0.19-0.29-0.58-0.38-0.87-0.2C4.5,5.65,4.41,6.01,4.56,6.3L6.4,9.48 C3.3,11.25,1.28,14.44,1,18h22C22.72,14.44,20.7,11.25,17.6,9.48z M7,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25S8.25,13.31,8.25,14C8.25,14.69,7.69,15.25,7,15.25z M17,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25s1.25,0.56,1.25,1.25C18.25,14.69,17.69,15.25,17,15.25z"/>
                             </svg>
                             <span>Download (APK)</span>
                         </a>
 
-                        <div class="download-qr-inline" aria-label="JeIT QR code">
-                            <img class="qr-image" src="JeIT.png" alt="کۆدی QR ـی JeIT" loading="lazy">
+                        <div class="download-qr-inline is-disabled" aria-hidden="true">
+                            <img class="qr-image" src="JeIT.png" alt="" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -214,19 +233,23 @@
                     بەشدار بە لە خۆفێرکردن؛ بە زمانی شیرینی دایک خۆت فێری تەکنەلۆجیا بکە.
                 </p>
                 <div class="download-buttons">
-                    <a href="https://apps.apple.com/uz/app/jeit-a-place-for-infotech/id6746078778" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                    <a class="btn btn-primary btn-large is-disabled" role="link" aria-disabled="true">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                         </svg>
                         <span>Download on the<br><strong>App Store</strong></span>
                     </a>
-                    <a href="jeit.apk" class="btn btn-primary btn-large" download>
+                    <a class="btn btn-primary btn-large is-disabled" role="link" aria-disabled="true">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                             <path d="M17.6,9.48l1.84-3.18c0.16-0.31,0.04-0.69-0.26-0.85c-0.29-0.15-0.65-0.06-0.83,0.22l-1.88,3.24 c-2.86-1.21-6.08-1.21-8.94,0L5.65,5.67c-0.19-0.29-0.58-0.38-0.87-0.2C4.5,5.65,4.41,6.01,4.56,6.3L6.4,9.48 C3.3,11.25,1.28,14.44,1,18h22C22.72,14.44,20.7,11.25,17.6,9.48z M7,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25S8.25,13.31,8.25,14C8.25,14.69,7.69,15.25,7,15.25z M17,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25s1.25,0.56,1.25,1.25C18.25,14.69,17.69,15.25,17,15.25z"/>
                         </svg>
                         <span>Download (APK)</span>
                     </a>
                 </div>
+                <p class="download-retired">
+                    دابارکردن ڕاگیراوە. تکایە وەشانی نوێ بەکاربهێنە:
+                    <a href="https://ceit.vercel.app" lang="en" dir="ltr">ceit.vercel.app</a>
+                </p>
             </div>
         </div>
     </section>

@@ -4,8 +4,17 @@ const mobileMenu = document.getElementById('mobileMenu');
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// The deprecation banner sits above the sticky header, so the header's bottom edge
+// moves as the page scrolls. Pin the fixed mobile menu right under it.
+const placeMenu = () => {
+    mobileMenu.style.top = `${Math.max(0, header.getBoundingClientRect().bottom)}px`;
+};
+
 // Mobile Menu Toggle
 const setMenu = (open) => {
+    if (open) {
+        placeMenu();
+    }
     mobileMenu.classList.toggle('active', open);
     menuToggle.classList.toggle('active', open);
     menuToggle.setAttribute('aria-expanded', String(open));
@@ -80,6 +89,10 @@ window.addEventListener('scroll', () => {
     header.style.boxShadow = scrolled
         ? '0 4px 12px rgba(0, 0, 0, 0.1)'
         : '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+
+    if (mobileMenu.classList.contains('active')) {
+        placeMenu();
+    }
 }, { passive: true });
 
 // Animate elements on scroll
